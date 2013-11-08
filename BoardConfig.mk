@@ -125,7 +125,7 @@ TARGET_FORCE_CPU_UPLOAD := true
 COMMON_GLOBAL_CFLAGS += -DFORCE_CPU_UPLOAD
 
 # Graphics
-BOARD_EGL_CFG := device/huawei/c8650/prebuilt/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/huawei/u8650/prebuilt/lib/egl/egl.cfg
 BOARD_USE_SKIA_LCDTEXT := true
 TARGET_FORCE_CPU_UPLOAD := true
 USE_OPENGL_RENDERER := true
