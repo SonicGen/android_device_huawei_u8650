@@ -90,20 +90,13 @@ PRODUCT_COPY_FILES += \
     device/huawei/u8650/prebuilt/etc/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
     device/huawei/u8650/prebuilt/etc/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
     device/huawei/u8650/prebuilt/etc/init.qcom.sdio.sh:system/etc/init.qcom.sdio.sh \
-   device/huawei/u8650/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # Init files
 PRODUCT_COPY_FILES += \
-    device/huawei/u8650/prebuilt/init.huawei.rc:root/init.huawei.rc \
-    device/huawei/u8650/prebuilt/ueventd.huawei.rc:root/ueventd.huawei.rc \
-    device/huawei/u8650/prebuilt/init.rc:root/init.rc \
-  device/huawei/u8650/prebuilt/init.huawei.usb.rc:root/init.huawei.usb.rc
-# Init files
-#PRODUCT_COPY_FILES += \
- #       device/huawei/u8650/prebuilt/root/init:root/init \
-  #      device/huawei/u8650/prebuilt/root/init.huawei.rc:root/init.huawei.rc \
-   #     device/huawei/u8650/prebuilt/root/init.rc:root/init.rc \
-    #    device/huawei/u8650/prebuilt/root/ueventd.rc:root/ueventd.rc
+    device/huawei/u8650/ramdisk/init.huawei.rc:root/init.huawei.rc \
+    device/huawei/u8650/ramdisk/ueventd.huawei.rc:root/ueventd.huawei.rc \
+    device/huawei/u8650/ramdisk/init.rc:root/init.rc \
+    device/huawei/u8650/ramdisk/init.huawei.usb.rc:root/init.huawei.usb.rc
 
 # Wi-Fi releated
 PRODUCT_COPY_FILES += \
@@ -127,14 +120,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/huawei/u8650/prebuilt/bin/vold:system/bin/vold \
     device/huawei/u8650/prebuilt/etc/AudioFilter.csv:system/etc/AudioFilter.csv
-
-# Kernel modules
-#PRODUCT_COPY_FILES += \
- #   device/huawei/u8650/prebuilt/lib/modules/zram.ko:system/lib/modules/zram.ko
-
-# Ensure that /cache is never used for deodexing
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dexopt-data-only=1
 
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
