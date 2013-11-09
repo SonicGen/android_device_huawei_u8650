@@ -12,12 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Inherit CM APNS configuration
+$(call inherit-product, vendor/cm/config/gsm.mk)
+
 # Inherit device configuration
 $(call inherit-product, $(LOCAL_PATH)/u8650.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_mini_phone.mk)
-$(call inherit-product, vendor/cm/config/gsm.mk)
 
 # Setup device configuration
 PRODUCT_NAME := cm_u8650
