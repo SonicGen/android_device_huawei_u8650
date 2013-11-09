@@ -1,9 +1,5 @@
-LOCAL_PATH := $(my-dir)
+LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),u8650)
-    subdir_makefiles := \
-        $(LOCAL_PATH)/libaudio/Android.mk \
-        $(LOCAL_PATH)/liblights/Android.mk \
-        $(LOCAL_PATH)/libcamera/Android.mk \
-    include $(subdir_makefiles)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),u8650)
+include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
